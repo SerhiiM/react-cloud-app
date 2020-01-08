@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          React cloud interface
+          React cloud interface [updated]
         </p>
       </header>
     </div>
