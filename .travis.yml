@@ -1,0 +1,17 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t react-cloud-app -f Dockerfile.dev .
+
+script:
+  - docker run react-cloud-app
+
+deploy:
+  provider: firebase
+  app: react-cloud-app
+  api_key:
+    secure: $FIREBASE_API_KEY
+  on:
+    branch: master
