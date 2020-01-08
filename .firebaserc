@@ -1,6 +1,6 @@
 {
   "projects": {
     "default": "my-first-cloud-project-854df",
-    "staging": "my-first-cloud-project-854df"
+    "react-cloud-app": "my-first-cloud-project-854df"
   }
 }
