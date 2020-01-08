@@ -1,16 +1,15 @@
 language: node_js
 node_js:
   - 10
-
-before_install:
-  - npm i
-
+warnings_are_errors: false
+install:
+  - npm install
 script:
   - npm run build
-
 deploy:
   provider: firebase
   project: react-cloud-app
+  skip_cleanup: true
   token:
     secure: $FIREBASE_API_KEY
   on:
