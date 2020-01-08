@@ -1,19 +1,15 @@
 language: node_js
 node_js:
-- 10
-warnings_are_errors: false
-install:
-- npm install
+  - "11.0"
+branches:
+    only:
+      - master
 script:
+- npm install
 - npm run build
 deploy:
+  skip_cleanup: true
   provider: firebase
   project: react-cloud-app
-  skip_cleanup: true
   token:
     secure: "$FIREBASE_API_KEY"
-  on:
-    branch: master
-env:
-  global:
-    secure: BDnR8T/WjNxEftdNGslWiXLUAoPEnmtmn5M6pOE5HnaxIoNVHlPwzwIeJxuoEH3RJ6Dp/mGhmm4DUaFWdtdf7GEFEZcRNiwkiSv8yX+hMRapEt/dlofFvRiVNX7hi09CUwSjyNrVkvKacO6LRTIBkz/aTKBwLNKolJJwA/lIr71Vwt+qbULkyFx7U76GK/vBYEVgWE3AgvZGJ+PFJRj9BT6tP1m0T8iEBuxC7WrKoFMzKU+8CgZLfSqS0UMYVG/RvmM1tIJj/Rxrx5/p+Nwxq/+o0ZPfvzcCOc3q9tDaubkFgCGMXQipqr7M5LfxhfmU1EeyJLsbN2gubIU54M+Ft4b5AnbYQRwhqWaKnC1g6ZS4YJHAD1bX3hIDEFSfP2fM9lYpHTCVageEvn/TgSLj1GC3ZupnzWWAaMd5CSiMyl1GANeMxXifC6oK9gX4YFlO20RJ+oUykAsy4xQ07mRC+5/M49ttKuCODmw8QryY8FS0X5cJGbHGNADD5juJIvCu9bE278mRiCXVkmXuL7PC31qGNAwnkUUnRchsfx/wVHT4MSmmssiR4WqoqUwF/cwg9VwZ6Z5PEtmIyZputz8nU3Zx+rOJhlrZ5FJOB7HWhGIvsrQkSbokeghoDtjJlrXpLVQ2WzLgeJP4/yrAYiqyEMtYyTxdgNMJQeVDqyTCFUc=
