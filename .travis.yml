@@ -1,12 +1,12 @@
-sudo: required
-services:
-  - docker
+language: node_js
+node_js:
+  - 10
 
 before_install:
-  - docker build -t react-cloud-app .
+  - npm i
 
 script:
-  - docker run react-cloud-app
+  - npm run build
 
 deploy:
   provider: firebase
