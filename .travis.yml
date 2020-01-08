@@ -10,8 +10,8 @@ script:
 
 deploy:
   provider: firebase
-  app: react-cloud-app
-  api_key:
+  project: react-cloud-app
+  token:
     secure: $FIREBASE_API_KEY
   on:
     branch: master
